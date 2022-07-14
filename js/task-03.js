@@ -12,3 +12,19 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const galleryParentElemRef = document.querySelector('.gallery');
+console.log('1. Get reference to parent element', galleryParentElemRef);
+
+const makeGalleryMarkup = images
+  .map(
+    ({ url, alt }) =>
+      `<li class='gallery__item'><img src=${url} alt=${alt} width = 500 class="gallery__img"></li>`
+  )
+  .join('');
+console.log(
+  'Create markup from array and add it to HTML. MARKUP --->>>',
+  makeGalleryMarkup
+);
+
+galleryParentElemRef.insertAdjacentHTML('afterbegin', makeGalleryMarkup);
