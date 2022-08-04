@@ -34,4 +34,5 @@ refs.clearBtnRef.addEventListener('click', onClearBtnRefClick);
 
 function onClearBtnRefClick() {
   refs.parentElRef.innerHTML = '';
+  refs.inputValueRef.value = '';
 }

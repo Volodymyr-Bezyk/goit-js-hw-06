@@ -3,8 +3,9 @@ formRef.addEventListener('submit', onFormRefSubmit);
 
 function onFormRefSubmit(event) {
   event.preventDefault();
-  if (!event.currentTarget[0].value || !event.currentTarget[1].value)
+  if (!event.currentTarget[0].value || !event.currentTarget[1].value) {
     return alert('You must fill all fields!!!');
+  }
 
   const formData = new FormData(formRef);
   const formProps = {};
